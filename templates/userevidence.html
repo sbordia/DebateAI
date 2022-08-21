@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+    <head>
+        <title>Sentence Converter - Emotion</title>
+        <link
+          rel="shortcut icon"
+          href="{{ url_for('static', filename='Debate.jpg') }}"
+        />
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+    </head>
+    <body>
+        <img src="{{ url_for('static', filename='Debate.jpg') }}" class="icon" />
+        <h3>Repeat steps from last page. Check 3 boxes for the Variation 2 prompts you like best. Output will be based on what you choose</h3>
+        <form action = "/userevidence" method = "post">
+            <div class="form-control">
+                <label>Variation 2 prompts
+                    <small>(Check 3)</small>
+                </label>
+                <!-- Input Type Checkbox -->
+                <label for="inp-1">
+                    <input type="checkbox"
+                           name="inp-1"
+                           id="inp-1"
+                           value="ch1">
+                           Boring sentence: Turkey is necessary in NATO has it provides a legitimate deterrence towards Russia, due to its weapons and geographical proximity.<br></br>
+                           Here I have written a persuasive sentence with more evidence: Turkey’s NATO membership allows it to freely sell drones to Ukraine, enabling deterrence against Russia. According to the Washington Post, Ankara relies on its NATO security guarantee to cooperate closely with Ukraine for its own economic interests, maximizing the market share of its drones and keeping its own drone fleet flying.</input></label>
+                <label for="inp-2">
+                    <input type="checkbox"
+                           name="inp-2"
+                           id="inp-2"
+                           value="ch2">
+                           Boring sentence: Legalization of drugs is necessary as they can actually reduce drug-related deaths.<br></br>
+                           Here I have written a persuasive sentence with more evidence: Legalization of marijuana has empirically been shown to reduce opioid emergencies, as a University of Pittsburgh study finds that in the four states that legalized marijuana, CA, Maine, Nevada, and Massachusetts, opioid emergencies went down 7.6%.</input></label>
+                <label for="inp-3">
+                    <input type="checkbox"
+                           name="inp-3"
+                           id="inp-3"
+                           value="ch3">
+                           Boring sentence: The US is to blame for the Yemen War as we are sponsoring Saudi Arabia's misuse of weapons.<br></br>
+                           Here I have written a persuasive sentence with more evidence: The war in Yemen is America’s war as Saudi Arabia has spent a fortune buying arms from America to prosecute a war that has killed almost 250,000 people — the world’s worst humanitarian catastrophe in our lifetime. Continuing to provide weapons shows the world US is determined to keep aiding a Saudi-backed war.</input></label>
+                <label for="inp-4">
+                    <input type="checkbox"
+                           name="inp-4"
+                           id="inp-4"
+                           value="ch4">
+                           Boring sentence: Even though progress has been made, women are still paid less than men. <br></br> 
+                           Here I have written a persuasive sentence with more evidence: In 2020, women made 83 cents for every dollar earned by men, according to the U.S. Census Bureau. Women of color are at an even greater disadvantage. The gender wage gap was much larger in 1960, when women's pay was 61% of men's. But progress has stalled over the last 15 or more years. 
+                           </input></label>
+                <label for="inp-5">
+                    <input type="checkbox"
+                           name="inp-5"
+                           id="inp-5"
+                           value="ch5">
+                           Boring sentence: Guns are killing many people in the US, and it is on a larger scale than other developed countries. <br></br>
+                           Here I have written a persuasive sentence with more evidence: The US accounts for just 4% of the world's population but 35% of global firearm suicides. Americans are 25 times more likely to be killed in a gun homicide than people in other high-income countries.
+                        </input></label>
+                <label for="inp-6">
+                    <input type="checkbox"
+                           name="inp-6"
+                           id="inp-6"
+                           value="ch6">
+                           Boring sentence: Most people in the world are affected by climate change, and many countries have lost billions of dollars due to climate related disasters. <br></br>
+                           Here I have written a persuasive sentence with more evidence: At least 85 percent of the global population has experienced weather events made worse by climate change, according to research published Monday in the journal Nature Climate Change. In fact, in the United States, climate disasters have already led to more than $100 billion in damage this year, according to The Washington Post.
+                        </input></label>
+            </div>
+            <input type="submit" value="Submit" name="action4"/>
+        </form>
+    </body>
+</html>

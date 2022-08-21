@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
+      format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+body,
+input {
+  font-size: 16px;
+  line-height: 24px;
+  color: #353740;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+.icon {
+  width: 80px;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #4216f3;
+  margin: 16px 0 40px;
+  text-align: center;
+}
+
+
+h3 {
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #202123;
+  margin: 16px 0 40px;
+}
+
+h4 {
+  font-size: 15px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #202123;
+  margin: 16px 0 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+input[type="text"] {
+  padding: 12px 16px;
+  border: 1px solid #10a37f;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+::placeholder {
+  color: #8e8ea0;
+  opacity: 1;
+}
+input[type="submit"] {
+  padding: 12px 0;
+  color: #fff;
+  background-color: #10a37f;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+.result {
+  font-weight: bold;
+  margin-top: 40px;
+  white-space: pre-wrap
+}
+
+
+        /* Styling the Form (Color, Padding, Shadow) */
+form {
+  background-color: #fff;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+      /* Styling form-control Class */
+.form-control {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+      /* Styling form-control Label */
+.form-control label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+      /* Styling form-control input,
+      select, textarea */
+.form-control input,
+.form-control select,
+.form-control textarea {
+  border: 1px solid #777;
+  border-radius: 2px;
+  font-family: inherit;
+  padding: 10px;
+  display: block;
+  width: 95%;
+}
+
+      /* Styling form-control Radio
+      button and Checkbox */
+.form-control input[type="radio"],
+.form-control input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  font-weight: bold;
+}
+
+button {
+  background-color: #05c46b;
+  border: 1px solid #777;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 21px;
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+#button {
+  width: 6em;
+  border: 2px solid green;
+  background: #ffe;
+  border-radius: 5px;
+}
+a {
+  display: block;
+  width: 100%;
+  line-height: 2em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+a:hover {
+  color: red;
+  background: #eff;
+}

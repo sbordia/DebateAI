@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+  <title>Sentence Converter</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='Debate.jpg') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='Debate.jpg') }}" class="icon" />
+
+  <h2>Enter your name and then click submit.</h2>
+
+  <form action = "/" method = "post">
+    <div class="form-control">
+      <label for="name" id="label-name">
+          Name
+      </label>
+      <input class = "input" type="text"
+             name="name" required
+             placeholder="Enter your name" /></div>
+      <input type="submit" value="Submit" name="action5"/>
+  </form>
+
+
+  <br></br>
+</body>
+
+</html>
+
+
+<!-- <script>
+  let input = document.querySelector(".input");
+  let button = document.querySelector(".submit");
+  button.disabled = true;
+  input.addEventListener("change", stateHandle);
+
+  function stateHandle() {
+    if(document.querySelector(".input").value === "") {
+        button.disabled = true;
+    } else {
+        button.disabled = false;
+    }
+  }
+</script> -->

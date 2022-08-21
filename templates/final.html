@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+  <title>Sentence Converter</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='Debate.jpg') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='Debate.jpg') }}" class="icon" />
+  <h3>Last survey for the experiment</h3>
+
+    <form action = "/final" method = "post">
+        <div class="form-control">
+            <label>Did you prefer using the pretrained model or the one where you had flexibility to choose the training prompts yourself?</label>
+   
+            <label for="recommed-3">
+                <input type="radio" id="recommed-3" name="recommend" value="pretrained">Pretrained model</input>
+            </label>
+            <label for="recommed-4">
+                <input type="radio" id="recommed-4" name="recommend" value="usertrained">Usertrained model</input>
+            </label>
+            <label for="recommed-5">
+                <input type="radio" id="recommed-5" name="recommend" value="Did not have a preference">Did not have a preference</input>
+            </label>
+        </div>
+
+        <div class ="form-control">
+          <label>Explain briefly (1-2 sentences) why you chose the pretrained model, usertrained model, or did not have a preference.</label>
+          <input type="text" name="Sentence" placeholder="Explain here" required />
+  
+        </div>
+
+    
+
+        <input type="submit" value="Submit" name="action7"/>
+
+    </form>
+    <br></br>
+    </form>
+</body>
+</html>

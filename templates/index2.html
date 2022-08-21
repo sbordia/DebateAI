@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+  <title>Sentence Converter</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='Debate.jpg') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='Debate.jpg') }}" class="icon" />
+
+
+  <h3>Convert a boring sentence into a persuasive sentence. Please do this 5 times and choose each time whether you agree or disagree about the statements made in Variation 1 and Variation 2. This is based on a predefined training set. Once done, please click Next.</h3>
+  <h4>Example sentences: Fastfood is unhealthy, War is always unjustified, Fossil fuels are bad for the climate </h4>
+
+  <form action="/index2" method="post">
+    <input type="text" name="Sentence" placeholder="Enter your boring sentence (do not put a period)" required />
+    <input type="submit" class = "submit" value="Results" name="action1"/>
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+
+  <form action = "/index2" method = "post">
+
+    <div class="form-control">
+        <label>Make sure to fill out all 3 questions</label>
+        <label>You would use Variation 1 as a way to convey your original argument.</label>
+     
+        <label for="recommed-2">
+          <input type="radio" id="recommed-2" name="recommed" value="Agree">Agree</input>
+        </label>
+        <label for="recommed-1">
+          <input type="radio" id="recommed-1" name="recommed" value="Strongly Agree">Strongly Agree</input>
+        </label>
+        <label for="recommed-4">
+          <input type="radio" id="recommed-4" name="recommed" value="Disagree">Disagree</input>
+        </label>
+        <label for="recommed-3">
+            <input type="radio" id="recommed-3" name="recommed" value="Strongly Disagree">Strongly Disagree</input>
+        </label>
+
+    </div>
+
+    <div class="form-control">
+        <label>You would use Variation 2 as a way to convey your original argument.</label>
+     
+
+        <label for="recommed-2">
+          <input type="radio" id="recommed-2" name="recommend" value="Agree">Agree</input>
+        </label>
+        <label for="recommed-1">
+          <input type="radio" id="recommed-1" name="recommend" value="Strongly Agree">Strongly Agree</input>
+        </label>
+        <label for="recommed-4">
+          <input type="radio" id="recommed-4" name="recommend" value="Disagree">Disagree</input>
+        </label>
+        <label for="recommed-3">
+            <input type="radio" id="recommed-3" name="recommend" value="Strongly Disagree">Strongly Disagree</input>
+        </label>
+
+
+    </div>
+
+    <div class ="form-control">
+        <label>Briefly (1-2 sentences) explain your choices for Variation 1 and Variation 2</label>
+        <input type="text" name="Sentence" placeholder="Explain here" required />
+
+    </div>
+    <input type="submit" class = "submit" value="Submit" name="action2"/>
+
+  </form>
+
+<!--   <form action = "/index2" method = "post">
+
+    <div class="form-control">
+        <label>You would use Variation 2 as a way to convey your original argument.</label>
+     
+        <label for="recommed-1">
+          <input type="radio" id="recommed-1" name="recommend" value="Strongly Agree">Strongly Agree</input>
+        </label>
+        <label for="recommed-2">
+          <input type="radio" id="recommed-2" name="recommend" value="Agree">Agree</input>
+        </label>
+        <label for="recommed-3">
+            <input type="radio" id="recommed-3" name="recommend" value="Strongly Disagree">Strongly Disagree</input>
+        </label>
+        <label for="recommed-4">
+            <input type="radio" id="recommed-4" name="recommend" value="Disagree">Disagree</input>
+        </label>
+
+    </div>
+    <input type="submit" class = "submit" value="Submit" name="action10"/> -->
+
+  <br></br>
+</body>
+
+<a href="{{ url_for('user') }}">Next</a>
+
+</html>
+
+
+<!-- <script>
+  let input = document.querySelector(".input");
+  let button = document.querySelector(".submit");
+  button.disabled = true;
+  input.addEventListener("change", stateHandle);
+
+  function stateHandle() {
+    if(document.querySelector(".input").value === "") {
+        button.disabled = true;
+    } else {
+        button.disabled = false;
+    }
+  }
+</script> -->

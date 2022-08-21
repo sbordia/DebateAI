@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+    <head>
+        <title>Sentence Converter - Emotion</title>
+        <link
+          rel="shortcut icon"
+          href="{{ url_for('static', filename='Debate.jpg') }}"
+        />
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+    </head>
+    <body>
+        <img src="{{ url_for('static', filename='Debate.jpg') }}" class="icon" />
+        <h3>Now, you will build your own model. Check 3 boxes for the prompts you believe most effectively convey the original (boring) sentence. These will be used to train the model.</h3>
+        <form action = "/user" method = "post">
+            <div class="form-control">
+                <label>Variation 1 prompts
+                    <small>(Check 3)</small>
+                </label>
+                <!-- Input Type Checkbox -->
+                <label for="inp-1">
+                    <input type="checkbox"
+                           name="inp-1"
+                           id="inp-1"
+                           value="ch1">
+                           Boring sentence: We should not provoke Russia because it would be bad for our future and society. <br></br> 
+                           Here I have written a persuasive sentence with more emotion: Every action has an equal and opposite reaction, the third law of physics, and if we poke Russia, why would they just sit back? Now, I sincerely ask, is our own personal agenda against a country more important than the progress of us as a society? </input></label>
+                <label for="inp-2">
+                    <input type="checkbox"
+                           name="inp-2"
+                           id="inp-2"
+                           value="ch2">
+                           Boring sentence: America is ruining its global image due to its political decisions, and we are isolating ourselves from our allies. <br></br> 
+                           Here I have written a persuasive sentence with more emotion: I see a U.S. administration using or threatening instruments of economic coercion, tariffs and sanctions like no administration has done before, and I don't see America winning. In fact, for now, I see it losing, and what I do see is America alienating its allies, its friends, and ultimately the undermining of American credibility and American legitimacy across the globe. If America truly wants to be known as a world leader, it is high time they start acting like it.</input></label>
+                <label for="inp-3">
+                    <input type="checkbox"
+                           name="inp-3"
+                           id="inp-3"
+                           value="ch3">
+                           Boring sentence: African Americans deserve to be free, as that is one of the founding ideals of our country. <br></br>
+                           Here I have written a persuasive sentence with more emotion: This is no time to engage in the luxury of cooling off or to take the tranquilizing drug of gradualism, but instead now is the time to make real the promises of democracy by lifting our nation from the quick sands of racial injustice to the solid rock of brotherhood.</input></label>
+                <label for="inp-4">
+                    <input type="checkbox"
+                           name="inp-4"
+                           id="inp-4"
+                           value="ch4">
+                           Boring sentence: We need the press to keep our democracy functioning. <br></br> 
+                           Here I have written a persuasive sentence with more emotion: Our liberty depends on the freedom of the press, and that cannot be limited without it being lost. Our country is rooted in the ideals of liberty and democracy, but how can we claim to be a global leader if we ourselves fall victim to that dangerous drug known as hypocrisy.
+                           </input></label>
+                <label for="inp-5">
+                    <input type="checkbox"
+                           name="inp-5"
+                           id="inp-5"
+                           value="ch5">
+                           Boring sentence: We need to seek peace and be the leaders in doing so. <br></br>
+                           Here I have written a persuasive sentence with more emotion: My fellow Americans, let us take that first step. Let us step back from the shadow of war and seek out the way of peace. And if that journey is a thousand miles, or even more, let history record that we, in this land, at this time, took the first step.</input></label>
+                <label for="inp-6">
+                    <input type="checkbox"
+                           name="inp-6"
+                           id="inp-6"
+                           value="ch6">
+                           Boring sentence: We will fight to defend our country no matter what happens and no matter how many hardships and obstacles we have to overcome. We will support our allies, and together we will win. <br></br>
+                           Here I have written a persuasive sentence with more emotion: Even though large tracts of Europe and many old and famous States have fallen or may fall into the grip of the Gestapo and all the odious apparatus of Nazi rule, we shall not flag or fail. We shall go on to the end, we shall fight in France, we shall fight on the seas and oceans, we shall fight with growing confidence and growing strength in the air, we shall defend our Island, whatever the cost may be, we shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender, and even if, which I do not for a moment believe, this Island or a large part of it were subjugated and starving, then our Empire beyond the seas, armed and guarded by the British Fleet, would carry on the struggle, until, in God's good time, the New World, with all its power and might, steps forth to the rescue and the liberation of the old.
+                        </input></label>
+
+            </div>
+            <input type="submit" value="Submit" name="action3"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+  <title>Sentence Converter</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='Debate.jpg') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='Debate.jpg') }}" class="icon" />
+  <h3>Convert boring sentence into persuasive sentence. Please do this 5 times and choose each time whether you prefer the sentence that has emotion or evidence. This is based on a the settings you just picked. Once done, please fill out the form below, Do NOT click the next button until you have repeated this process 5 times.</h3>
+  <form action="/userindex" method="post">
+    <input type="text" name="Sentence" placeholder="Enter your boring sentence (do not put a period)" required />
+    <input type="submit" value="Results" name="action1"/>
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+
+  <form action = "/userindex" method = "post">
+ 
+
+    <div class="form-control">
+      <label>Make sure to fill out all 3 questions</label>
+      <label>You would use Variation 1 as a way to convey your original argument.</label>
+   
+      <label for="recommed-2">
+        <input type="radio" id="recommed-2" name="recommed" value="Agree">Agree</input>
+      </label>
+      <label for="recommed-1">
+        <input type="radio" id="recommed-1" name="recommed" value="Strongly Agree">Strongly Agree</input>
+      </label>
+      <label for="recommed-4">
+        <input type="radio" id="recommed-4" name="recommed" value="Disagree">Disagree</input>
+      </label>
+      <label for="recommed-3">
+          <input type="radio" id="recommed-3" name="recommed" value="Strongly Disagree">Strongly Disagree</input>
+      </label>
+
+    </div>
+
+    <div class="form-control">
+      <label>You would use Variation 2 as a way to convey your original argument.</label>
+   
+      <label for="recommed-2">
+        <input type="radio" id="recommed-2" name="recommend" value="Agree">Agree</input>
+      </label>
+      <label for="recommed-1">
+        <input type="radio" id="recommed-1" name="recommend" value="Strongly Agree">Strongly Agree</input>
+      </label>
+      <label for="recommed-4">
+        <input type="radio" id="recommed-4" name="recommend" value="Disagree">Disagree</input>
+      </label>
+      <label for="recommed-3">
+          <input type="radio" id="recommed-3" name="recommend" value="Strongly Disagree">Strongly Disagree</input>
+      </label>
+
+    </div>
+
+    <div class ="form-control">
+      <label>Briefly (1-2 sentences) explain your choices for Variation 1 and Variation 2</label>
+      <input type="text" name="Sentence" placeholder="Explain here" required />
+
+   </div>
+
+    <input type="submit" value="Submit" name="action6"/>
+
+  </form>
+  <br></br>
+</body>
+<a href="{{ url_for('final') }}">Next</a>
+</html>
